@@ -8,7 +8,7 @@ es_miembro = str(input(f'Eres Miembro de la Tienda (Si/No)? '))
 descuento = 0
 
 #Verificacion de caso
-if monto_compra > MONTO_COMPRA_DESC and es_miembro.strip().lower() == 'si':
+if monto_compra >= MONTO_COMPRA_DESC and es_miembro.strip().lower() == 'si':
     descuento = 0.1 #Descuento del 10%
 
 elif es_miembro.strip().lower() == 'si':
@@ -32,4 +32,5 @@ else:
     print(f'\nNo obtuviste ningun tipo de descuento')
     print(f'Te invitamos a hacerte miembro de la tienda')
     print(f'Monto final de la compra: {monto_compra:.2f}')
+
 
