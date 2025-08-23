@@ -1,35 +1,44 @@
-print(f'*** Calculadora ***')
+print(f'*** Calculadora con funciones ***')
 
-SALIR = False
-valor_1 = None
-valor_2 = None
+def captura_valores():
+    valor_1 = float(input(f'Ingresa el valor 1: '))
+    valor_2 = float(input(f'Ingresa el Valor 2: '))
+    return valor_1,valor_2
 
-while not SALIR:
-    print(f'''Indica la operacion a realizar
-    1. Suma
-    2. Resta
-    3. multiplicacion
-    4. division
-    5. salir''')
-    operacion = int(input(f'Indica que tipo de operaciones quieres hacer: '))
-    if  1 <= operacion <= 4:
-        valor_1 = float(input(f'Ingresa el primer Valor: '))
-        valor_2 = float(input(f'Ingresa el Segundo Valor: '))
-    if operacion == 1:
-        resultado = valor_1 + valor_2
-        print(f'El resultado es: {resultado:.2f}\n')
-    elif operacion == 2:
-        resultado = valor_1 - valor_2
-        print(f'El resultado es: {resultado}\n')
-    elif operacion == 3:
-        resultado = valor_1 * valor_2
-        print(f'El resultado es: {resultado}\n')
-    elif operacion == 4:
-        resultado = valor_1 / valor_2
-        print(f'El Resultado es: {resultado}\n')
-    elif operacion == 5:
-        SALIR = True
-        print(f'Saliendo de Calculadora...')
-    else:
-        print(f'Opcion Invalida. Favor de seleccionar la opcion correcta\n')
+if __name__ == '__main__':
 
+    while True:
+        print('Opciones Disponibles')
+        print(''' \t1. Sumar
+    2. Restar
+    3. Multiplicacion
+    4. Division.
+    5. Salir.''')
+
+        opcion = int(input('Selecciona una opcion: '))
+
+        if opcion == 1:
+            valor_1, valor_2 = captura_valores()
+            resultado = valor_1 + valor_2
+            print(f'El Resultado de la operacion es: {resultado}')
+
+        elif opcion == 2:
+            valor_1, valor_2 = captura_valores()
+            resultado = valor_1 - valor_2
+            print(f'El Resultado de la operacion es: {resultado}')
+
+        elif opcion == 3:
+            valor_1, valor_2 = captura_valores()
+            resultado = valor_1 * valor_2
+            print(f'El Resultado de la operacion es: {resultado}')
+
+        elif opcion == 4:
+            valor_1, valor_2 = captura_valores()
+            resultado = valor_1 / valor_2
+            print(f'El Resultado de la operacion es: {resultado}')
+
+        elif opcion == 5:
+            print('Saliendo de la Calculadora, hasta luego')
+            break
+        else:
+            print(f'Opcion Invalida Intenta de Nuevo')
