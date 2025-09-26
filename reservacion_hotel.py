@@ -16,15 +16,16 @@ total_sin_vista = dias_estadia * costo_sin_vista
 
 #Validacion de datos
 if not cuarto_con_vista == 'si':
-    print(f'''\n ------------- Detalles de la Reservacion -------------
+    print(f'''\n ------------- Detalles de la Reservacion -------------)
     Hola {nombre_cliente}
     Selecciono una cuarto sin vista al mar por un total de 
     {dias_estadia} dias 
     El Monto total Seria de ${total_sin_vista:.2f}''')
 
 else:
-    print(f''' \n ------------- Detalles de la Reservacion -------------
+    print(f''' \n ------------- Detalles de la Reservacion -------------)
     Hola {nombre_cliente}
     Selecciono una cuarto Con vista al mar por un total de 
     {dias_estadia} dias 
+
     El Monto total Seria de ${total_vista:.2f}''')
