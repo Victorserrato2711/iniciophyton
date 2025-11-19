@@ -6,7 +6,7 @@ from logger_base import log
 class Conexion:
         _DATABASE = 'test_db'
         _USERNAME = 'postgres'
-        _PASSWORD = '812568cel'
+        _PASSWORD = 'admin'
         _DB_PORT = '5432'
         _HOST = '127.0.0.1'
         _MIN_CON = 1
@@ -55,4 +55,5 @@ if __name__ == '__main__':
         conexion4 = Conexion.obtener_conexion()
         conexion5 = Conexion.obtener_conexion()
         Conexion.liberar_conexion(conexion3)
+
         conexion6 = Conexion.obtener_conexion()
